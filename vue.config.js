@@ -18,9 +18,9 @@ module.exports = {
   configureWebpack: {
     name: title
   },
-  chainWebpack(config){
+  chainWebpack(config) {
     // svg 规则配置，排除icons目录
-    config.module.rule('svg')
+    config.module.rule("svg")
           .exclude.add(resolve('src/icons'))
           .end()
     // 新增icons规则，设置svg-sprite-loader
@@ -30,7 +30,8 @@ module.exports = {
           .end()
           .use('svg-sprite-loader')
           .loader('svg-sprite-loader')
-          .options({ symboId: 'icon-[name]'}) // 使用图标名称
+          .options({ symbolId: 'icon-[name]'}) // 使用图标名称
           .end()
-  }
+  },
+
 }
