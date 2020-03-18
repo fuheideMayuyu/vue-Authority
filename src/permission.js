@@ -6,6 +6,7 @@ import { getToken } from '@/utils/auth';
 const whiteList = ['/login'] // 无需令牌白名单
 
 router.beforeEach(async (to, from, next) =>{
+  // 获取令牌判断用户是否登录
   const hasToken = getToken()
   if(hasToken){
     if(to.path === '/login'){
