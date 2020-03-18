@@ -1,15 +1,15 @@
-import Cookies from 'js-cookie'
+import Cookies from "js-cookie";
 
-const Token = 'token'
+const Token = "token";
 
-export function getToken(){
+export function getToken() {
   return Cookies.get(Token);
 }
 
-export function setToken(token){
-  return Cookies.set(Token, token)
+export function setToken(token) {
+  return Cookies.set(Token, token);
 }
 
-export function removeToken(){
-  return Cookies.remove(Token)
+export function removeToken() {
+  return Cookies.remove(Token);
 }

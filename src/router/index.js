@@ -1,6 +1,6 @@
-import Vue from 'vue'
-import Router from 'vue-router'
-import Layout from '@/Layout'
+import Vue from "vue"
+import Router from "vue-router"
+import Layout from '@/layout' // 布局页
 
 Vue.use(Router)
 

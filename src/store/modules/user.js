@@ -1,4 +1,4 @@
-import { getToken, setToken, removeToken } from '@utils/auth'
+import { getToken, setToken, removeToken } from '@/utils/auth'
 // 状态存储
 const state = {
   token: getToken(),
@@ -35,7 +35,7 @@ const actions = {
   },
 
   // get user info
-  getInfo(){
+  getInfo({ commit, state }){
     return new Promise((resolve) => {
       setTimeout(() =>{
         const roles = state.token === 'admin' ? ['admin'] : ['editor']

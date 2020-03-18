@@ -38,7 +38,7 @@ router.beforeEach(async (to, from, next) =>{
       next()
     } else {
       // 重定向至登录页
-      next(`/login?redirecct=${to.path}`)
+      next(`/login?redirect=${to.path}`)
     }
   }
 })

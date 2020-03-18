@@ -1,6 +1,6 @@
 <template>
   <div class="app-wrapper">
-    <sidebar class="sidebar-container" />
+    <!-- <sidebar class="sidebar-container" /> -->
     <div class="main-container">
       <router-view></router-view>
     </div>
@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import sidebar from '@/components/Sidebar'
+// import sidebar from '@/components/Sidebar'
 
 export default {
   data() {
@@ -32,7 +32,7 @@ export default {
 
   },
   components: {
-    sidebar
+    // sidebar
   },
 };
 </script>
