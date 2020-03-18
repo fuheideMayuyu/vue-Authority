@@ -4,6 +4,7 @@ import store from './store'
 import App from './App.vue'
 import "./icons/index.js"
 import './plugins/element.js'
+import './permission'
 
 // console.log('process.env.BASE_URL', process.env.BASE_URL)
 

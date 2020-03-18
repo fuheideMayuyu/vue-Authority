@@ -24,7 +24,9 @@ const actions = {
     return new Promise((resolve, reject) =>{
       setTimeout(() =>{
         if(username === 'admin' || username === 'jerry'){
-          commit('SET_TOKEN', username); // 通过该方法修改
+          // 保存状态信息
+          commit('SET_TOKEN', username);
+          // 写入cookie
           setToken(username);
           resolve() // resolve是成功后的回调函数
         } else {

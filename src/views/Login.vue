@@ -29,6 +29,7 @@ export default {
   },
   methods: {
     login() {
+      // 派发一个登陆action
       this.$store
         .dispatch('user/login', {username: this.username})
         .then(() => {
