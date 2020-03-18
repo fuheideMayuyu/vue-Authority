@@ -1,20 +1,36 @@
 <template>
   <div id="app">
-    <svg-icon icon-class="message">11111</svg-icon>
-    哈哈哈哈
-    <svg-icon icon-class="wx">11111</svg-icon>
-    333333
-    <svg-icon icon-class="qq">11111</svg-icon>
+    <img src="./assets/logo.png">
+    <div>
+      <p>
+        If Element is successfully added to this project, you'll see an
+        <code v-text="'<el-button>'"></code>
+        below
+      </p>
+      <el-button>el-button</el-button>
+    </div>
+    <HelloWorld msg="Welcome to Your Vue.js App"/>
   </div>
 </template>
 
 <script>
+import HelloWorld from './components/HelloWorld.vue'
+
 export default {
-  name: 'App',
-  components: {}
+  name: 'app',
+  components: {
+    HelloWorld
+  }
 }
 </script>
 
 <style>
-
+#app {
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 60px;
+}
 </style>
