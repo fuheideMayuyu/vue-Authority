@@ -4,10 +4,12 @@ import store from './store'
 import App from './App.vue'
 import "./icons/index.js"
 import './plugins/element.js'
-
-// console.log('process.env.BASE_URL', process.env.BASE_URL)
+import vPermission from './directive/permission'
 
 Vue.config.productionTip = false
+
+// 注册自定义指令 参数分别为指令名, 指令函数
+Vue.directive('permission', vPermission)
 
 new Vue({
   router,

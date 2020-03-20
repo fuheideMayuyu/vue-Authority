@@ -1,4 +1,5 @@
 const path = require('path')
+const bodyParser = require("body-parser");
 
 function resolve(dir) {
   return path.join(__dirname, dir)
@@ -13,7 +14,17 @@ module.exports = {
   devServer: {
     port: port,
     inline: true,
-    open: true
+    open: true,
+    proxy: {
+      // 代理 /dev-api/user/login 到 http://127.0.0.1:3000/user/login
+      [process.env.VUE_APP_BASE_API]: {
+        target: `http://127.0.0.1:3000/`,
+        changeOrigin: true, // 要不要变更origin头
+        pathRewrite: { // 地址重写：http://127.0.0.1:3000/user/login
+          ["^" + process.env.VUE_APP_BASE_API]: ""
+        }
+      }
+    },
   },
   configureWebpack: {
     name: title
