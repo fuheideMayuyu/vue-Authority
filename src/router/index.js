@@ -15,7 +15,6 @@ export const constRoutes = [
     component: Layout,
     redirect: '/home',
     children: [
-
       {
         path: 'home',
         component: () => import(/* webpackChunkName: "home" */ '@/views/Home.vue'),

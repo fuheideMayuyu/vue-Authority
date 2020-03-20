@@ -5,6 +5,7 @@ import App from './App.vue'
 import "./icons/index.js"
 import './plugins/element.js'
 import vPermission from './directive/permission'
+import './permission'
 
 Vue.config.productionTip = false
 

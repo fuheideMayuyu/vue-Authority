@@ -4,7 +4,7 @@ import { Message } from 'element-ui';
 import { getToken } from '@/utils/auth'; 
 
 const whiteList = ['/login'] // 无需令牌白名单
-
+// 全局路由守卫
 router.beforeEach(async (to, from, next) =>{
   // 获取令牌判断用户是否登录
   const hasToken = getToken()
@@ -25,6 +25,7 @@ router.beforeEach(async (to, from, next) =>{
           // 继续切换路由，确保addRoutes完成
           next({ ...to, replace: true })
         } catch (error) {
+          // 出错重置令牌并重新登陆
           await store.dispatch('user/resetToken')
           Message.error(error || 'Has Error')
           next(`/login?redirect=${to.path}`)

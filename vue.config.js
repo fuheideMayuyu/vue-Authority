@@ -44,5 +44,4 @@ module.exports = {
           .options({ symbolId: 'icon-[name]'}) // 使用图标名称
           .end()
   },
-
 }
