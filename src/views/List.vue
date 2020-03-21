@@ -1,37 +1,17 @@
 <template>
   <div>
-
+    <ul>
+      <li>
+        <router-link to="/detail/1">web全栈</router-link>
+      </li>
+      
+    </ul>
   </div>
 </template>
 
 <script>
-export default {
-  data() {
-    return {
-
-    };
-  },
-  computed: {
-
-  },
-  created() {
-
-  },
-  mounted() {
-
-  },
-  watch: {
-
-  },
-  methods: {
-
-  },
-  components: {
-
-  },
-};
+export default {};
 </script>
 
-<style scoped lang="scss">
-
+<style lang="scss" scoped>
 </style>

@@ -1,37 +1,20 @@
 <template>
-  <div>
-
-  </div>
+    <div>
+        id: {{id}}
+    </div>
 </template>
 
 <script>
-export default {
-  data() {
-    return {
-
-    };
-  },
-  computed: {
-
-  },
-  created() {
-
-  },
-  mounted() {
-
-  },
-  watch: {
-
-  },
-  methods: {
-
-  },
-  components: {
-
-  },
-};
+    export default {
+        props: {
+            id: {
+                type: String,
+                default: ''
+            },
+        },
+    }
 </script>
 
-<style scoped lang="scss">
+<style lang="scss" scoped>
 
 </style>

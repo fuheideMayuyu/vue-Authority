@@ -6,6 +6,7 @@ const permission = {
     const {value: pRoles } = binding
     // 获取用户角色
     // instanceof 类型判断 true or false
+    // 结构value并取别名pRoles
     const roles = store.getter && store.getter.roles
     if(pRoles && pRoles instanceof Array && pRoles.length > 0) {
       // 判断用户角色中是否有按钮要求的角色

@@ -1,37 +1,15 @@
 <template>
-  <div>
-    <h1>home page</h1>
+  <div class="home">
+    <h1>Home Page</h1>
+    <!-- <button v-permission="['admin', 'editor']">editor button</button>
+    <button v-permission="['admin']">admin button</button> -->
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
 export default {
-  data() {
-    return {
-
-    };
-  },
-  computed: {
-
-  },
-  created() {
-
-  },
-  mounted() {
-
-  },
-  watch: {
-
-  },
-  methods: {
-
-  },
-  components: {
-
-  },
+  name: "home",
+  components: {}
 };
 </script>
-
-<style scoped lang="scss">
-
-</style>

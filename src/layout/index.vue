@@ -1,14 +1,16 @@
 <template>
   <div class="app-wrapper">
-    <!-- <sidebar class="sidebar-container" /> -->
+    <sidebar class="sidebar-container" />
     <div class="main-container">
-      <router-view></router-view>
+      <Breadcrumb></Breadcrumb>
+      <router-view />
     </div>
   </div>
 </template>
 
 <script>
-// import sidebar from '@/components/Sidebar'
+import Sidebar from "@/components/Sidebar";
+import Breadcrumb from "@/components/Breadcrumb";
 
 export default {
   data() {
@@ -32,7 +34,8 @@ export default {
 
   },
   components: {
-    // sidebar
+    Sidebar, 
+    Breadcrumb
   },
 };
 </script>

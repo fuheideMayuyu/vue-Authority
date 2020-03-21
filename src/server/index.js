@@ -11,7 +11,6 @@ app.use(
 
 app.post("/user/login", (req, res) => {
   const { username } = req.body;
-
   if (username === "admin" || username === "jerry") {
     res.json({
       code: 1,
